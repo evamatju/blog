@@ -1,0 +1,29 @@
+
+
+<form action="/get_order/" method="post">
+
+
+
+<p>工单类型：<input name="type" type="radio" value="common">普通<input name="type" type="radio" value="critical">紧急<input name="type" type="radio" value="all">所有</p>
+
+<p><input name="type" type="radio" value="done">已完成<input name="type" type="radio" value="undergoing">正在处理</p>
+<p><input type="submit" value="提交工单"></p>
+
+</form>
+
+{% for i in orders %}
+
+  <div>
+	<h3>符合条件的工单：{{ i.ordername }}</h3>
+	<div class="level">
+		工单类型：{{ i.type }}
+        工单内容：{{ i.detail }}
+        创建日期：{{ i.date }}
+	</div>
+
+  </div>
+
+  <hr>
+
+
+{% endfor %}

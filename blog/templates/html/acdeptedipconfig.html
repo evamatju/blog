@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>远程电力指导平台</title>
+
+	<link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+	<link href="css/font-awesome.min.css?v=4.3.0" rel="stylesheet">
+
+	<!-- Data Tables -->
+	<link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/style.min.css?v=3.2.0" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/ajaxhandle.js"></script>
+	<script type="text/javascript" src="js/language.js"></script>
+	<script type="text/javascript" src="js/verify.js"></script>
+	<script type="text/javascript" src="js/hlslisttable.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+
+</head>
+<body class="gray-bg" onload="fLoad();getUserGroupList()">
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5></h5>
+            </div>
+            <div class="ibox-content">
+                <div class="">
+                    <a  data-toggle="modal"  href="acceptedipconfig.html#modal-form" class="btn btn-primary ">添加ip</a>
+                </div>
+                <div id="divload"></div>
+                <div  id="pagelist"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="modal-form" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="m-t-none m-b">添加ip</h3>
+
+                        <form role="form">
+                            <div class="form-group" display="none">
+                                <input type="text" value="id" class="form-control" id="txtname" >
+                            </div>
+                             <div class="form-group">
+                                <label>ip分组名称</label>
+                                <input type="text" placeholder="请输入起始ip" class="form-control" id="txtipname">
+                            </div>
+                            <div class="form-group">
+                                <label>起始ip</label>
+                                <input type="text" placeholder="请输入起始ip" class="form-control" id="txtipstart">
+                            </div>
+                             <div class="form-group">
+                                <label>终止ip</label>
+                                <input type="text" placeholder="请输入起始ip" class="form-control" id="txtipstop">
+                            </div>
+
+
+                            <div class="form-group">
+                            <fieldset>
+                                <label class="control-label">配置权限：
+                                	<div><label><input type="checkbox" class="" multiple="" id="remote-help"  value="1">远程指导</label></div>
+                                	<div><label><input type="checkbox" class=" auth2" multiple="" id="rtmp-deliver"  value="2">发送视频</label></div>
+                                	<div><label><input type="checkbox" class=" auth2" multiple="" id="rtmp-receive"  value="3"> 接收视频</label></div>
+                                	<div><label><input type="checkbox" class=" auth2" multiple="" id="audio-deliver"  value="4"> 发送音频</label></div>
+                                </label>
+                              </fieldset>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button class="btn btn-primary" type="button" data-dismiss="modal" aria-label="Close" onclick="return addIpGroup()">
+                                    <strong>保存</strong>
+                                </button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-12 table-responsive">
+        <table class="table table-bordered">
+            <caption>ip组列表</caption>
+            <thead>
+                <tr><th>ip组名</th><th>起始ip</th><th>终止ip</th><th colspan="3">操作</th></tr>
+            </thead>
+            <tbody id = "user-list-content">
+                   <tr> 
+              <td>xioaming</td>
+              <td>192.168.1.1</td>
+              <td>192.168.1.254</td>
+              <td><button class="btn btn-primary" data-toggle="modal" data-target="#modal-form" onclick="reSetIpGroup('xiaoming')"> 编辑</button></td>
+              <td><button class="btn btn-primary"onclick = "deleteIpGroup('xiaoming')">删除</button></td><tr>
+            </tbody>
+        </table>
+    </div>
+
+
+<!-- 全局js -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.4.0"></script>
+
+
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+<!-- Data Tables -->
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+
+</body>
+</html>

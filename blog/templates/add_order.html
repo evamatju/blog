@@ -1,0 +1,13 @@
+<form action="/add_order/" method="post">
+
+{{show}}
+
+
+<p>工单名：<input name="orderName" type="text"></p>
+<p>工单类型：<input name="type" type="radio" value="common">普通<input name="type" type="radio" value="critical">紧急</p>
+<p>工单内容：<textarea name="detail" ></textarea></p>
+
+    <p>执行者：<input name="operator" type="text"></p>
+<p><input type="submit" value="提交工单"></p>
+
+</form>

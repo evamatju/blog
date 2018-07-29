@@ -1,0 +1,16 @@
+<form action="/view/" method="post">
+
+访问方式：{{method_str}}
+
+<p>text：<input name="text_in" type="text"></p>
+<p>order：<textarea name="order_in"></textarea></p>
+<p><input type="submit" value="提交"></p>
+
+{{printJSON}}
+
+</form>
+
+
+uwsgi --http :8001 --chdir /home/baichi/anything/workspace/django/blog --wsgi-file blog/wsgi.py --master --processes 4 --threads 2 --stats 127.0.0.1:9191
+
+/home/baichi/anything/workspace/django/blog

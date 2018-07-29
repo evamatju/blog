@@ -1,0 +1,428 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"get",
+				"getJobOrders"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"col",
+				"col-sm-2"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/usr/local/nginx/html/html/js/ajaxhandle.js",
+			"settings":
+			{
+				"buffer_size": 19716,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"<span style=\"color:#0000FF;\">import</span> urllib<span style=\"color:#0000CC;\">.</span>request<span style=\"color:#0000CC;\">,</span>os; pf <span style=\"color:#0000CC;\">=</span> <span style=\"color:#FF00FF;\">'Package Control.sublime-package'</span><span style=\"color:#FF00FF;\">;</span> ipp <span style=\"color:#0000CC;\">=</span> sublime<span style=\"color:#0000CC;\">.</span>installed_packages_path<span style=\"color:#0000CC;\">(</span><span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">;</span> urllib<span style=\"color:#0000CC;\">.</span>request<span style=\"color:#0000CC;\">.</span>install_opener<span style=\"color:#0000CC;\">(</span> urllib<span style=\"color:#0000CC;\">.</span>request<span style=\"color:#0000CC;\">.</span>build_opener<span style=\"color:#0000CC;\">(</span> urllib<span style=\"color:#0000CC;\">.</span>request<span style=\"color:#0000CC;\">.</span>ProxyHandler<span style=\"color:#0000CC;\">(</span><span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">)</span> <span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">;</span> open<span style=\"color:#0000CC;\">(</span>os<span style=\"color:#0000CC;\">.</span>path<span style=\"color:#0000CC;\">.</span>join<span style=\"color:#0000CC;\">(</span>ipp<span style=\"color:#0000CC;\">,</span> pf<span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">,</span> <span style=\"color:#FF00FF;\">'wb'</span><span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">.</span>write<span style=\"color:#0000CC;\">(</span>urllib<span style=\"color:#0000CC;\">.</span>request<span style=\"color:#0000CC;\">.</span>urlopen<span style=\"color:#0000CC;\">(</span> <span style=\"color:#FF00FF;\">'http://sublime.wbond.net/'</span> <span style=\"color:#0000CC;\">+</span> pf<span style=\"color:#0000CC;\">.</span>replace<span style=\"color:#0000CC;\">(</span><span style=\"color:#FF00FF;\">' '</span><span style=\"color:#0000CC;\">,</span><span style=\"color:#FF00FF;\">'%20'</span><span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">.</span>read<span style=\"color:#0000CC;\">(</span><span style=\"color:#0000CC;\">)</span><span style=\"color:#0000CC;\">)</span>",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jie/html/order.html",
+		"/home/jie/html/css/style.css",
+		"/home/jie/html/js/ajaxhandle.js",
+		"/home/jie/html/addhlslist.html",
+		"/home/jie/html/js/userlisttable.js",
+		"/home/jie/html/remotelist.html",
+		"/home/jie/html/js/plugins/jqgrid/jquery.jqGrid.min.js@0820",
+		"/home/jie/html/userconfig.html",
+		"/home/jie/html/js/ajaxhandle_ori.js",
+		"/home/jie/html/js/orderView.js",
+		"/home/jie/html/login.html",
+		"/home/jie/html/usergroupconfig.html",
+		"/home/jie/html/acdeptedipconfig.html",
+		"/home/jie/html/index.html",
+		"/usr/local/nginx/html/html/js/navigation.js",
+		"/home/jie/下载/EasyDarwin-7.1.16.1111/EasyDarwin/WinNTSupport/html/login.html",
+		"/home/jie/html/js/usergrouplisttable.js",
+		"/home/jie/html/js/rtsplisttable.js",
+		"/home/jie/html/js/hlslisttable.js",
+		"/home/jie/html/demo.html",
+		"/home/jie/html/js/test.js",
+		"/home/jie/html/chinese/language.js",
+		"/home/jie/html/hlslist.html",
+		"/home/jie/html/basic.html",
+		"/home/jie/html/not.html",
+		"/home/jie/html/play.html",
+		"/home/jie/html/js/rtmplisttable.js",
+		"/home/jie/html/remote.html",
+		"/home/jie/html/js/plugins/dataTables/jquery.dataTables.js",
+		"/home/jie/下载/EasyDarwin-7.1.16.1111/EasyDarwin/WinNTSupport/html/hlslist.html",
+		"/home/jie/html/remoteList.html",
+		"/home/jie/html/js/plugins/codemirror/codemirror.js",
+		"/home/jie/html/english/language.js",
+		"/home/jie/html/js/verify.js",
+		"/home/jie/html/chinese/language.js~",
+		"/home/jie/html/js/language.js",
+		"/home/jie/下载/video.js-5.14.1/docs/examples/simple-embed/index.html",
+		"/usr/local/nginx/html/test.html",
+		"/usr/local/nginx/html/ckplayer/ckplayer.js",
+		"/home/jie/桌面/test.html"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"/home/jie/html/js/",
+			"/home/jie/html",
+			"/home/jie/EasyDarwin-7.0.5",
+			"/home/jie/html"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"content",
+			"clickShow",
+			"showlink",
+			"showLink",
+			"alert",
+			"dvplay",
+			"emergen",
+			"type",
+			"\"",
+			"base",
+			"127.0.0.1",
+			"localhost",
+			"127.0.0.1",
+			"baseUrl",
+			"127.0.0",
+			"return toVaild()",
+			"onsubmit=\\\"return toVaild()\\\"",
+			"onsubmit=\"return toVaild()\"",
+			"table",
+			"style",
+			"dvplay",
+			"modal-form-modify",
+			"title",
+			"添加",
+			"ermergency",
+			"txttouser",
+			"txtdetail",
+			"str_warn_f",
+			"modal",
+			"form-control",
+			"modal",
+			"type",
+			"GotoPage",
+			"option",
+			"image",
+			"远程指导",
+			"远程",
+			"order-component",
+			"\">\n",
+			"function",
+			"ibox float-e-margins",
+			"起始",
+			"用户管理",
+			"textStatus",
+			"getUserGroupList",
+			"form-control",
+			"                              ",
+			"function",
+			"deleteUserList",
+			"OutputHtmlPerson",
+			"load",
+			"addRTMPList",
+			"BHLSNameRepeat",
+			"getRTMP",
+			"getRTSPList",
+			"gotolist",
+			"BHLSNameRepeat",
+			"getHLSList",
+			"gotoHlsList",
+			"addhlslist.html",
+			"gotoHlsList",
+			"addhlslist.html",
+			"gotoHlsList",
+			"gotoAddHlsList",
+			"delete",
+			"deleteHLSList",
+			"function",
+			"legend",
+			"multiple",
+			"class=\"form-control\" ",
+			"class=\"form-control\"",
+			"id",
+			"class=\"form-control\" ",
+			"class=\"form-control\"",
+			"class",
+			"  ",
+			"class=\"form-control\"",
+			"id",
+			"class=\"form-control\" ",
+			"class=\"form-control\"",
+			"input",
+			"fieldset",
+			"                                 <label><input type=\"checkbox\" class=\"form-control auth2\" multiple=\"\" id=\"rtmp-receive\"  value=\"4\"> 发送音频<label>",
+			"  <label><input type=\"checkbox\" class=\"form-control\" multiple=\"\" id=\"remote-help\"  value=\"1\">远程指导<label>\n                                <label><input type=\"checkbox\" class=\"form-control auth2\" multiple=\"\" id=\"rtmp-deliver\"  value=\"2\">发送视频<label>\n                                 <label><input type=\"checkbox\" class=\"form-control auth2\" multiple=\"\" id=\"rtmp-receive\"  value=\"3\"> 接收视频<label>\n                                 <label><input type=\"checkbox\" class=\"form-control auth2\" multiple=\"\" id=\"rtmp-receive\"  value=\"4\"> 发送音频<label>",
+			"input",
+			"<label><input type=\"checkbox\" class=\"form-control\" multiple=\"\" id=\"remote-help\"  value=\"1\">远程指导<label>\n                                <label><input type=\"checkbox\" class=\"form-control auth2\" multiple=\"\" id=\"rtmp-deliver\"  value=\"2\">发送视频<label>\n                                 <label><input type=\"checkbox\" class=\"form-control auth2\" multiple=\"\" id=\"rtmp-receive\"  value=\"3\"> 接收视频<label>\n                                 <label><input type=\"checkbox\" class=\"form-control auth2\" multiple=\"\" id=\"rtmp-receive\"  value=\"4\"> 发送音频<label>",
+			"checkbox",
+			"order",
+			"basic",
+			"order",
+			"form-control",
+			"str_confirm_delete",
+			"delete",
+			"dele",
+			"del",
+			"delete",
+			"rtmp",
+			"hls",
+			"gJson",
+			"GotoPage",
+			"siteList",
+			"gotolist",
+			"getpar",
+			"getHLSList",
+			"getRTMP",
+			"i",
+			"str_rtsp_buffersecs_warn",
+			"txtbuffersecs",
+			"bar",
+			"pagelist",
+			"getRTMPList",
+			"hls",
+			"HLS",
+			"iframe",
+			"dvplay",
+			"getRTMPList",
+			"url",
+			"load",
+			"str_hls_live",
+			"dvplay",
+			"load",
+			"showLink",
+			"gJson",
+			"OutputHtml",
+			"json",
+			"gJson",
+			"json",
+			"siteList"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"msg.textStatus",
+			"",
+			"txtnewuser",
+			"str_emer_warn",
+			"str_order_detail_warn"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/usr/local/nginx/html/html/js/ajaxhandle.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								338,
+								338
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "language.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

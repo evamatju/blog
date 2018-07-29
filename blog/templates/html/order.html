@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>电力远程指导平台</title>
+  <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+  <link href="css/font-awesome.min.css?v=4.3.0" rel="stylesheet">
+  <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/style.min.css?v=3.2.0" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+<!--   <link href="css/detail.css" rel="stylesheet">
+  <link href="css/public.css" rel="stylesheet"> -->
+  <script type="text/javascript" src="js/ajaxhandle.js"></script>
+  <script type="text/javascript" src="js/language.js"></script>
+  <script type="text/javascript" src="js/verify.js"></script>
+  <script type ="text/javascript " src="js/orderView.js"></script>
+
+</head>
+
+<body class="gray-bg"  onload="fLoad();getJobOrders('all')">
+  <div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title clearfix">
+            <h5><span class="glyphicon glyphicon-play"></span>
+              <select class="" name="order-type">
+                <option value="all"  onclick="getJobOrders('all')">所有工单</option>
+                <option value="normal" onclick="getJobOrders('normal')">普通工单</option>
+                <option value="critical" onclick="getJobOrders('critical')">紧急工单</option>
+                <option value="done" onclick="getJobOrders('done')">已完成工单</option>
+                <option value="undergoing" onclick="getJobOrders('undergoing')">处理中工单</option>
+              </select>
+            </h5>
+          </div>
+          <div class="ibox-content">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8 " id = "order-list-content">
+
+                  <div class="col-sm-6"> 
+                    <div class="order-component">
+                      <div class="modal-header"> <h5>异常检测id</h5></div>
+                      <div class="modal-body">
+                       <div class="row">
+                         <div class="col-sm-3">
+                           <img src="" alt="类型标志" title="一个工单的具体消息" />
+                         </div>
+                         <div class="col-sm-9">
+                           <h5>异常告警检测name</h5>
+                           <p class="detail">220千伏变电站#1主变第二套保护装置告警异常检测detail</p>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="modal-footer">
+                       <a data-toggle="modal"  href="order.html#modal-form-detail" class="btn btn-primary" onclick="getJobOrderDetail(id) ">详情</a> 
+                       &nbsp;&nbsp; 
+                       <a data-toggle="modal"  href="order.html#modal-form-modify" class="btn btn-primary" onclick="getJobOrder(id)">修改</a>
+                       &nbsp;&nbsp;
+                       <a data-toggle="modal"  onclick="deleteOrder('id')" class="btn btn-default">删除</a>
+                     </div>
+                   </div>
+                 </div>
+
+               </div>
+
+               <div class="col-sm-4">
+                <div class="add-order">
+                  <form method="get" class="form-horizontal" role="form">
+                    <h5>添加工单</h5>
+                    <div class="form-group">
+                     <label class="col-sm-3 control-label" for="txtname">名称</label>
+                     <div class="col-sm-9">
+                       <input type="text" id="txtname" class="form-control-input" value="">
+                     </div>
+                   </div>
+
+                   <div class="form-group">
+                     <label class="col-sm-3 control-label">详情</label>
+                     <div id="add-detail-first" class="col-sm-9">
+                       <textarea type="text" id="txtdetail" class="form-control-input" value=""> </textarea>
+                     </div>
+                     <div class="col-sm-3 col-sm-offset-3">
+                         <input type="button" class="" value="增加详情" onclick="addDetail('#add-detail-first')" />
+                     </div>
+                   
+                   </div>
+
+                   <div class="form-group">
+                     <label class="col-sm-3 control-label">类型</label>
+                     <div class="col-sm-9">
+                      <select name="type" id="type">                                   
+                        <option value="normal" role="presentation" selected><a role="menuitem" tabindex="-1" href="#">普通</a></option>
+                        <option value="critical" role="presentation"><a role="menuitem" tabindex="-1" href="#">不急</a></option>
+                        <option value="normal" role="presentation"><a role="menuitem" tabindex="-1" href="#">紧急</a></option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                   <label class="col-sm-3 control-label">受令人</label>
+                   <div class="col-sm-9">
+                     <input type="text" id="txttouser" class="form-control-input" value=""> </textarea>
+                   </div>
+                 </div>
+
+                 <div class="form-group">
+                   <div class="col-sm-12  col-sm-offset-4">
+                    <button  class="btn btn-primary" onclick="addJobOrder()" >保存</button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- detail -->
+<div id="modal-form-detail" class="modal fade" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" id="detail-name">
+        <!-- id -->
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered ">
+          <tr class="">
+            <td class=" " >编号</td>
+            <td id="detail-orderId" class="  " colspan="3"></td>
+            <td class="" id="">单位</td>
+            <td id="detail-unit" class=" ">国家电网</td>
+          </tr>
+          <tr class="">
+            <td class="">发令人</td>
+            <td id="detail-publisher" class=""></td>
+            <td class="">受令人</td>
+            <td id="detail-operator" class=""></td>
+            <td class="">发令时间</td>
+            <td id="detail-date"></td>
+          </tr>
+        </div>
+
+        <div class="opmcrbottom">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr >
+                <th style="width:10%;">顺序</th>
+                <th style="width:75%;">操作项目</th>
+                <th style="width:15%;">进度</th>
+              </tr>
+            </thead>
+            <tbody id ="order-dertail-content">
+              <tr>
+                <td>1</td>
+                <td>一个得太啦</td>
+                <td>未完成</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- /detail -->
+
+  <!-- 修改 modify -->
+  <div id="modal-form-modify" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" id="modify-id">
+          <!-- id -->123456789
+        </div>
+        <div class="modal-body">
+         <form method="get" class="form-horizontal" role="form">
+          <h5>修改工单</h5>
+
+          <div class="form-group">
+           <label class="col-sm-3 control-label" for="txtname">名称</label>
+           <div class="col-sm-9">
+             <input type="text" id="modify-name" class="form-control-input" value="">
+           </div>
+         </div>
+
+         <div class="form-group">
+           <label class="col-sm-3 control-label">详情</label>
+           <div class="col-sm-9" id="modify-detail-content">
+             <textarea type="text"  class="form-control-input" value=""> </textarea>
+             <input   type="button" class="pull-left" value="删除详情" onclick="deleteDetail(this)" />
+           </div>
+           <div class="col-sm-3 col-sm-offset-3">
+             <input type="button" class="" value="增加详情" onclick="addDetail('#modify-detail-content')" />
+           </div>
+         </div>
+
+         <div class="form-group">
+           <label class="col-sm-3 control-label">进度</label>
+           <div class="col-sm-9">
+             <input id="modify-progress" type="" name="modify-progress" />
+           </div>
+         </div>
+
+         <div class="form-group">
+           <label class="col-sm-3 control-label">类型</label>
+           <div class="col-sm-9">
+            <select name="type" id="modify-type">                                   
+              <option value="normal" role="presentation" selected><a role="menuitem" tabindex="-1" href="#">普通</a></option>
+              <option value="critical" role="presentation"><a role="menuitem" tabindex="-1" href="#">低</a></option>
+              <option value="normal" role="presentation"><a role="menuitem" tabindex="-1" href="#">紧急</a></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+         <label class="col-sm-3 control-label">受令人</label>
+         <div class="col-sm-9">
+           <input type="text" id="modify-operator" class="form-control-input" value=""> </input>
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-sm-12  col-sm-offset-4">
+          <button id="modify-submit" type="button" class="btn btn-primary" >保存</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+<!-- /修改 -->
+<!-- 全局js -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.4.0"></script>
+
+<!-- 自定义js -->
+<script src="js/content.min.js?v=1.0.0"></script>
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.i-checks').iCheck({
+      checkboxClass: 'icheckbox_square-green',
+      radioClass: 'iradio_square-green',
+    });
+  });
+</script>
+
+
+</body>
+
+</html>

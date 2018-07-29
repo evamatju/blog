@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>远程电力指导平台</title>
+    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet" />
+    <link href="css/font-awesome.min.css?v=4.3.0" rel="stylesheet" />
+
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/style.min.css?v=3.2.0" rel="stylesheet" />
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">Glasses</h1>
+
+            </div>
+            <h3>欢迎使用 远程电力指导平台</h3>
+
+            <form class="m-t" role="form" method="post" >
+                <div class="form-group">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="用户名" required="required" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="密码" />
+                </div>
+                <input type="button"  class="btn btn-primary block full-width m-b" onclick="return toVaild()" value="登录" />
+            </form>
+            <div id="error-promote"></div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js?v=3.4.0"></script>
+    <script language="javascript">
+       function toVaild(){
+       var name = document.getElementById("name").value;
+       var password = document.getElementById("password").value;
+         if(name==""||name==null)
+         {
+            alert("用户名为空");
+            return false;
+        }
+        if(password==""||password==null)
+        {
+            alert("密码为空");
+            return false;
+        }
+
+        $.post(
+            "/login/",
+            {"name":name, "pw": password},
+            function(json){
+                if(json.result.code == 100) {
+                    sessionStorage.username = json.result.username;
+                    window.location.href = "index.html";
+                } else {
+                    password = "";
+                    document.getElementById("error-promote").innerHTML = json.result.msg;
+                }
+            }
+            )
+                
+                // sessionStorage.JSESSIONID = name;
+                // window.location.href = "index.html";
+                return false;
+            }
+        </script>
+    </body>
+    </html>

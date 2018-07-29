@@ -1,0 +1,27 @@
+<style>
+.content {font-size:12px;}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>工单列表</title>
+</head>
+
+<a href="/add_order/">添加工单</a>
+
+{% for i in orders %}
+
+  <div>
+	<h3>已有工单：{{ i.ordername }}</h3>
+	<div class="level">
+		工单类型：{{ i.type }}
+        工单内容：{{ i.detail }}
+        创建日期：{{ i.date }}
+	</div>
+
+  </div>
+
+  <hr>
+
+
+{% endfor %}

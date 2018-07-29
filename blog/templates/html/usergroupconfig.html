@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>远程电力指导平台</title>
+
+	<link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+	<link href="css/font-awesome.min.css?v=4.3.0" rel="stylesheet">
+
+	<!-- Data Tables -->
+	<link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/style.min.css?v=3.2.0" rel="stylesheet">
+	<script type="text/javascript" src="js/ajaxhandle.js"></script>
+	<script type="text/javascript" src="js/language.js"></script>
+	<script type="text/javascript" src="js/verify.js"></script>
+	<script type="text/javascript" src="js/hlslisttable.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+
+</head>
+<body class="gray-bg" onload="fLoad();getUserGroupList()">
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>权限组列表</h5>
+            </div>
+            <div class="ibox-content">
+                <div class="">
+                    <a  data-toggle="modal"  href="usergroupconfig.html#modal-form" class="btn btn-primary ">添加组</a>
+                </div>
+                <div id="divload"></div>
+                <div  id="pagelist"></div>
+            
+            <div class=" table-responsive">
+        <table class="table table-bordered table-striped">
+            <caption>用户组列表</caption>
+            <thead>
+                <tr><th>用户组名</th><th colspan="3">操作</th></tr>
+            </thead>
+            <tbody id = "user-list-content">
+                   <tr> 
+              <td>xioaming</td>
+              <td><button class="btn btn-primary" data-toggle="modal" data-target="#modal-form" onclick="reSetUserGroup('xiaoming')"> 编辑</button></td>
+              <td><button class="btn btn-primary"onclick = "deleteUserGroup('xiaoming')">删除</button></td><tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="modal-form" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="m-t-none m-b">添加/修改权限组</h3>
+
+                        <form role="form">
+                            <div class="form-group">
+                                <label>名称：</label>
+                                <input type="text" placeholder="请输入权限组名称" class="" id="txtname1">
+                            </div>
+                            <div class="form-group">
+                            <fieldset>
+                               <label> 配置权限：</label>
+                                    <div><label class="form-control"><input type="checkbox"  name="auth-set" class="auth2"  id="order-accept1" value="0">工单接受</label></div>
+                                    <div><label class="form-control"><input type="checkbox"  name="auth-set" class="auth2"  id="remote-help1"  value="1">远程指导</label></div>
+                                    <div><label class="form-control"><input type="checkbox" name="auth-set" class="auth2"  id="rtmp-deliver1"  value="2">发送视频</label></div>
+                                    <div><label class="form-control"><input type="checkbox" name="auth-set" class="auth2"  id="rtmp-receive1"  value="3"> 接收视频</label></div>
+                              </fieldset>
+                            </div>
+                            <div class="form-group">
+                            <fieldset>
+                                <label>添加用户</label>
+                                <div> <label class="form-control"><input type="checkbox" name="add-user" class=""  id="us1" value="us1">u1</label></div>
+                               <div> <label class="form-control"><input type="checkbox" name="add-user" class=""  id="us2" value="us2">u2</label></div>
+                                <div><label class="form-control"><input type="checkbox"  name="add-user" class=" "  id="us3" value="us3">u3</label></div>
+                                <div><label class="form-control"><input type="checkbox" name="add-user" class=" "  id="us4" value="us4">u4</label></div>
+                              </fieldset>
+                            </div>
+                            <div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button class="btn btn-primary" type="button" data-dismiss="modal" aria-label="Close" onclick="return addUserGroup()">
+                                <strong>保存</strong>
+                                </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 全局js -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js?v=3.4.0"></script>
+
+
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+
+<!-- Data Tables -->
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+
+</body>
+</html>>

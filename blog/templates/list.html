@@ -1,0 +1,26 @@
+<style>
+.content {font-size:12px;}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员列表</title>
+</head>
+
+<a href="/add/">添加</a>
+<a href="/del_user/">删除</a>
+
+{% for i in articles %}
+
+  <div>_
+	<h3>已有用户：<a href="/edit_user/">{{ i.username }}</a></h3>
+	<div class="level">
+		用户权限：{{ i.level }}
+	</div>
+
+  </div>
+
+  <hr>
+
+
+{% endfor %}
